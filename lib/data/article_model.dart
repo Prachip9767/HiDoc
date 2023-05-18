@@ -9,14 +9,6 @@ ArticleModel? articleModelFromJson(String str) {
   }
 }
 
-String? articleModelToJson(ArticleModel data) {
-  try {
-    return json.encode(data.toJson());
-  } catch (e) {
-    print('Error serializing JSON: $e');
-    return null;
-  }
-}
 class ArticleModel {
   List<News> news;
   List<Article> trandingBulletin;
@@ -55,17 +47,6 @@ class ArticleModel {
   );
 
 
-  Map<String, dynamic> toJson() => {
-    "news": List<dynamic>.from(news.map((x) => x.toJson())),
-    "trandingBulletin": List<dynamic>.from(trandingBulletin.map((x) => x.toJson())),
-    "specialityName": specialityName,
-    "latestArticle": List<dynamic>.from(latestArticle.map((x) => x)),
-    "exploreArticle": List<dynamic>.from(exploreArticle.map((x) => x.toJson())),
-    "trandingArticle": List<dynamic>.from(trandingArticle.map((x) => x.toJson())),
-    "article": article.toJson(),
-    "bulletin": List<dynamic>.from(bulletin.map((x) => x.toJson())),
-    "sId": sId,
-  };
 }
 
 class Article {
@@ -109,19 +90,6 @@ class Article {
     createdAt: json["createdAt"] == null ? null : DateTime.parse(json["createdAt"]),
   );
 
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "articleTitle": articleTitle,
-    "redirectLink": redirectLink,
-    "articleImg": articleImg,
-    "articleDescription": articleDescription,
-    "specialityId": specialityId,
-    "rewardPoints": rewardPoints,
-    "keywordsList": keywordsList,
-    "articleUniqueId": articleUniqueId,
-    "articleType": articleType,
-    "createdAt": createdAt?.toIso8601String(),
-  };
 }
 
 class News {
@@ -159,16 +127,6 @@ class News {
     publishedAt: DateTime.parse(json["publishedAt"]),
   );
 
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "title": title,
-    "url": url,
-    "urlToImage": urlToImage,
-    "description": description,
-    "speciality": speciality,
-    "newsUniqueId": newsUniqueId,
-    "trendingLatest": trendingLatest,
-    "publishedAt": publishedAt.toIso8601String(),
-  };
+
 
 }
