@@ -7,8 +7,8 @@ class ArticleController extends GetxController {
   final Rx<ArticleModel?> singleEvent = Rx<ArticleModel?>(null);
 
   @override
-  void onInit() {
-    getData();
+  void onInit() async{
+   await getData();
   }
 
   getData() async {

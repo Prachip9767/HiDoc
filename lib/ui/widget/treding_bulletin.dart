@@ -43,7 +43,10 @@ class TrendingBulletin extends StatelessWidget{
                                article[index]
                                    .articleTitle ??
                                    '',
-                               style: context.textTheme.titleMedium),
+                             style: context.textTheme.bodyMedium?.copyWith(
+                               color: Colors.black,
+                               fontWeight: FontWeight.w700,
+                               fontSize: 18,),),
                            const SizedBox(
                              height: 12,
                            ),

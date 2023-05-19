@@ -18,9 +18,8 @@ class ArticleWidget extends StatelessWidget{
                  color: Colors.black.withOpacity(0.4), width: 2),
            ),
            child: Padding(
-             padding: const EdgeInsets.all(16.0),
+             padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
              child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
                crossAxisAlignment: CrossAxisAlignment.center,
                children: [
                  Text(title,
