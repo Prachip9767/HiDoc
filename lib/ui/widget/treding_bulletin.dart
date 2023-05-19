@@ -35,7 +35,7 @@ class TrendingBulletin extends StatelessWidget{
                  itemCount: article.length,
                  itemBuilder: (context, index) => Container(
                    child: Padding(
-                     padding: const EdgeInsets.symmetric(horizontal: 16),
+                     padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 8),
                      child: Column(
                          crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
