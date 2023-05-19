@@ -28,7 +28,6 @@ class TrendingBulletin extends StatelessWidget{
                child: Text('Trending Hidoc Bulletin',
                    style: context.textTheme.titleLarge),
              ),
-             const SizedBox(height: 14,),
              SizedBox(
                child: ListView.builder(
                  shrinkWrap: true,

@@ -35,9 +35,6 @@ class HidocBulletin extends StatelessWidget {
                 mainAxisAlignment:MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(
-                    height: 16,
-                  ),
                   Text(
                    articleModel[index].articleTitle,
                     style: context.textTheme.bodyMedium?.copyWith(

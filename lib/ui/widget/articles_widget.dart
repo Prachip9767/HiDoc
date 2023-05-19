@@ -25,9 +25,6 @@ class ArticleWidget extends StatelessWidget{
                children: [
                  Text(title,
                      style: context.textTheme.titleLarge),
-                 const SizedBox(
-                   height: 12,
-                 ),
                  ListView.builder(
                      shrinkWrap: true,
                      physics: const NeverScrollableScrollPhysics(),
