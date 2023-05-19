@@ -31,8 +31,8 @@ class ArticleView extends GetView<ArticleController> {
                 padding: const EdgeInsets.only(top: 14, bottom: 14),
                 child: Container(
                   padding: const EdgeInsets.all(8.0),
-                  height: MediaQuery.of(context).size.width/10,
-                  width: MediaQuery.of(context).size.width/3,
+                  height:40,
+                  width: 150,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(18),
