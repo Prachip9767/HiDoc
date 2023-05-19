@@ -9,7 +9,7 @@ class NewsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return news.isNotEmpty? SizedBox(
       child: ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -18,6 +18,6 @@ class NewsWidget extends StatelessWidget {
               imageUrl: news[index].urlToImage,
               articleTitle: news[index].title,
               articleDescription:news[index].description,)),
-    );
+    ):SizedBox.shrink();
   }
 }

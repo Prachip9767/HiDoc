@@ -10,7 +10,7 @@ class TrendingBulletin extends StatelessWidget{
 
    @override
   Widget build(BuildContext context) {
-   return  Padding(
+   return article.isNotEmpty? Padding(
        padding: const EdgeInsets.symmetric(horizontal: 16),
      child: Container(
        width: double.infinity,
@@ -62,7 +62,7 @@ class TrendingBulletin extends StatelessWidget{
          ),
        ),
      ),
-   );
+   ):SizedBox.shrink();
 
   }
 

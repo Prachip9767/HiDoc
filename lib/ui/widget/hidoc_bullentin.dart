@@ -9,7 +9,7 @@ class HidocBulletin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return articleModel.isNotEmpty? Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
@@ -62,6 +62,6 @@ class HidocBulletin extends StatelessWidget {
           ),
         )
       ],
-    );
+    ):const SizedBox.shrink();
   }
 }
