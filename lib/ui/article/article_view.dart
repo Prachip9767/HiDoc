@@ -1,6 +1,7 @@
 import 'package:ecnhrf/data/article_model.dart';
 import 'package:ecnhrf/ui/article/article_controller.dart';
 import 'package:ecnhrf/ui/widget/articles_widget.dart';
+import 'package:ecnhrf/ui/widget/news_widget.dart';
 import 'package:ecnhrf/ui/widget/top_card_widget.dart';
 import 'package:ecnhrf/ui/widget/treding_bulletin.dart';
 import 'package:flutter/foundation.dart';
@@ -89,7 +90,8 @@ class ArticleView extends GetView<ArticleController> {
                         children: [
                           Expanded(
                             child: HidocBulletin(
-                              articleModel: controller.singleEvent.value!.trandingBulletin,
+                              articleModel: controller
+                                  .singleEvent.value!.trandingBulletin,
                             ),
                           ),
                           SizedBox(width: 16),
@@ -97,7 +99,8 @@ class ArticleView extends GetView<ArticleController> {
                             child: Padding(
                               padding: const EdgeInsets.only(top: 16),
                               child: TrendingBulletin(
-                                article: controller.singleEvent.value!.trandingBulletin,
+                                article: controller
+                                    .singleEvent.value!.trandingBulletin,
                               ),
                             ),
                           ),
@@ -105,7 +108,8 @@ class ArticleView extends GetView<ArticleController> {
                       ),
                     ] else ...[
                       HidocBulletin(
-                        articleModel: controller.singleEvent.value!.trandingBulletin,
+                        articleModel:
+                            controller.singleEvent.value!.trandingBulletin,
                       ),
                       SizedBox(height: 16),
                       TrendingBulletin(
@@ -119,13 +123,15 @@ class ArticleView extends GetView<ArticleController> {
                           Expanded(
                             child: ArticleWidget(
                               title: 'Trending Article',
-                              article: controller.singleEvent.value!.trandingArticle,
+                              article:
+                                  controller.singleEvent.value!.trandingArticle,
                             ),
                           ),
                           SizedBox(width: 16),
                           Expanded(
                             child: ArticleWidget(
-                              article: controller.singleEvent.value!.exploreArticle,
+                              article:
+                                  controller.singleEvent.value!.exploreArticle,
                               title: 'Explore More Article',
                             ),
                           ),
@@ -141,7 +147,7 @@ class ArticleView extends GetView<ArticleController> {
                         title: 'Explore More Article',
                       ),
                     ],
-
+                    NewsWidget(news: controller.singleEvent.value!.news,)
                   ],
                 ),
               ),
