@@ -25,62 +25,13 @@ class TopCardWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              if (kIsWeb)
-                Row(
-                  children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(16),
-                          topRight: Radius.circular(16),
-                        ),
-                        child: CachedNetworkImage(
-                          width: double.infinity,
-                          height: MediaQuery.of(context).size.height / 5,
-                          imageUrl: imageUrl,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 16),
-                            Text(
-                              articleTitle,
-                              style: context.textTheme.bodyText1?.copyWith(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
-                                height: 1.5,
-                              ),
-                            ),
-                            const SizedBox(height: 16),
-                            Text(
-                              articleDescription,
-                              style: context.textTheme.bodyText1?.copyWith(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              if (!kIsWeb)
-                Column(
-                  children: [
-                    ClipRRect(
+        child: Column(
+          children: [
+            if (kIsWeb)
+              Row(
+                children: [
+                  Expanded(
+                    child: ClipRRect(
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(16),
                         topRight: Radius.circular(16),
@@ -88,11 +39,14 @@ class TopCardWidget extends StatelessWidget {
                       child: CachedNetworkImage(
                         width: double.infinity,
                         height: MediaQuery.of(context).size.height / 5,
-                        imageUrl: imageUrl,
+                        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7cF_dIQaF1cYoka6EZ1tBRTNbmVw9JwZIQ&usqp=CAU',
+                        // imageUrl,
                         fit: BoxFit.fill,
                       ),
                     ),
-                    Padding(
+                  ),
+                  Expanded(
+                    child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,10 +73,55 @@ class TopCardWidget extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ],
-                ),
-            ],
-          ),
+                  ),
+                ],
+              ),
+            if (!kIsWeb)
+              Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16),
+                    ),
+                    child: CachedNetworkImage(
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height / 5,
+                      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7cF_dIQaF1cYoka6EZ1tBRTNbmVw9JwZIQ&usqp=CAU',
+                      // imageUrl,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 16),
+                        Text(
+                          articleTitle,
+                          style: context.textTheme.bodyText1?.copyWith(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 18,
+                            height: 1.5,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          articleDescription,
+                          style: context.textTheme.bodyText1?.copyWith(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+          ],
         ),
       ),
     );
