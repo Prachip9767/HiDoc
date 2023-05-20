@@ -23,10 +23,15 @@ HiDoc Dr is a one of a kind of doctor networking platform and is currently a usa
 # Dependencies ✨
 
  cached_network_image: ^3.2.0
+ 
   get: ^4.6.5
+  
   path_provider: ^2.0.15
+  
   flutter_svg: ^0.22.0
+  
   http: ^0.13.5
+  
   flutter_staggered_grid_view: ^0.6.2
 
 # Clone this Repo To Your System Using Android Studio✨
