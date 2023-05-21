@@ -53,7 +53,7 @@ class ReadMoreButton extends StatelessWidget {
           ),
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(
-                kIsWeb ? Colors.cyan[400] : Colors.orange[600]),
+                kIsWeb ? Colors.cyan[600] : Colors.orange[600]),
             minimumSize:
                 MaterialStateProperty.all(Size(kIsWeb ? 400 : 300, 50)),
             padding: MaterialStateProperty.all(EdgeInsets.all(10)),

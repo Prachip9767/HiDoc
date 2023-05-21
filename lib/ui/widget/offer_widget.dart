@@ -9,31 +9,33 @@ class OfferWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey[300]!, width: 2),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                OfferItemWidget(
-                  icon: Icons.quiz_sharp,
-                  description: 'Participate and Win Exciting Prizes',
-                  title: 'Quizzess :',
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                OfferItemWidget(
-                  icon: Icons.calculate_outlined,
-                  description: ' Get Access to 800+ Evidence Based calculators',
-                  title: 'Medical\nCalculators :',
-                ),
-              ]),
+      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 16),
+      child: Expanded(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey[300]!, width: 2),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  OfferItemWidget(
+                    icon: Icons.quiz_sharp,
+                    description: 'Participate and Win Exciting Prizes',
+                    title: 'Quizzess :',
+                  ),
+                  Divider(
+                    thickness: 2,
+                  ),
+                  OfferItemWidget(
+                    icon: Icons.calculate_outlined,
+                    description: ' Get Access to 800+ Evidence Based calculators',
+                    title: 'Medical\nCalculators :',
+                  ),
+                ]),
+          ),
         ),
       ),
     );

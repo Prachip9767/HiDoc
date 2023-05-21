@@ -1,6 +1,7 @@
 import 'package:ecnhrf/data/article_model.dart';
 import 'package:ecnhrf/ui/article/article_controller.dart';
 import 'package:ecnhrf/ui/static_widgets/static_wigets.dart';
+import 'package:ecnhrf/ui/widget/Social_network_visit_widget.dart';
 import 'package:ecnhrf/ui/widget/articles_widget.dart';
 import 'package:ecnhrf/ui/widget/bar_container.dart';
 import 'package:ecnhrf/ui/widget/news_widget.dart';
@@ -278,6 +279,7 @@ class ArticleView extends GetView<ArticleController> {
                                         context: context,
                                       )
                                     ],
+                                    SocialNetworkVisit(),
                                   ]),
                                 ),
                               ],
