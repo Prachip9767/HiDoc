@@ -53,12 +53,12 @@ class TrendingBulletin extends StatelessWidget {
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 12,
+                                    height: 16,
                                   ),
                                   Text(article[index].articleDescription ?? '',
                                       style: context.textTheme.titleSmall),
                                   SizedBox(
-                                    height: 30,
+                                    height: 24,
                                   ),
                                   Text('Read more',
                                       style: TextStyle(
