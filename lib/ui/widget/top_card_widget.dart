@@ -36,8 +36,7 @@ class TopCardWidget extends StatelessWidget {
                       CachedNetworkImage(
                         width: double.infinity,
                         height: double.maxFinite,
-                        imageUrl:
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7cF_dIQaF1cYoka6EZ1tBRTNbmVw9JwZIQ&usqp=CAU',
+                        imageUrl:imageUrl,
                         fit: BoxFit.fill,
                       ),
                       Positioned(
