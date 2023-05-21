@@ -15,7 +15,7 @@ class ArticleWidget extends StatelessWidget{
        child: Container(
            decoration: BoxDecoration(
              border: Border.all(
-                 color: Colors.black.withOpacity(0.4), width: 2),
+                 color: Colors.grey[400]!, width: 2),
            ),
            child: Padding(
              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
@@ -33,7 +33,7 @@ class ArticleWidget extends StatelessWidget{
                        CrossAxisAlignment.center,
                        mainAxisAlignment: MainAxisAlignment.center,
                        children: [
-                         const Divider(height: 4, color: Colors.black),
+                         Divider(height: 4, color:Colors.grey[600]),
                          Padding(
                            padding: const EdgeInsets.all(4.0),
                            child: Text(article[index].articleTitle,
