@@ -58,7 +58,7 @@ class TrendingBulletin extends StatelessWidget {
                                   Text(article[index].articleDescription ?? '',
                                       style: context.textTheme.titleSmall),
                                   SizedBox(
-                                    height: 12,
+                                    height: 30,
                                   ),
                                   Text('Read more',
                                       style: TextStyle(

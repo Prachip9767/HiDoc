@@ -23,8 +23,8 @@ class HidocBulletin extends StatelessWidget {
                 mainAxisAlignment:MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Divider(thickness: 10,color: Colors.blueAccent,endIndent: 200),
-                  SizedBox(height: 8,),
+                  const Divider(thickness: 10,color: Colors.blueAccent,endIndent: 200),
+                  const SizedBox(height: 8,),
                   Text(
                    articleModel[index].title,
                     style: context.textTheme.bodyMedium?.copyWith(
@@ -43,7 +43,9 @@ class HidocBulletin extends StatelessWidget {
                       fontSize: 16,
                     ),
                   ),
-
+                  const SizedBox(
+                    height: 30,
+                  ),
                   Text('Read more',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
