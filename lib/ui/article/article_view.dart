@@ -64,15 +64,15 @@ class ArticleView extends GetView<ArticleController> {
                         const SizedBox(
                           height: 16,
                         ),
-                        BarContainer(),
-                        const SizedBox(
-                          height: 16,
-                        ),
                         Expanded(
                           child: SingleChildScrollView(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                BarContainer(),
+                                const SizedBox(
+                                  height: 16,
+                                ),
                                 TopCardWidget(
                                   articleDescription: controller.singleEvent
                                           .value?.article.articleImg ??
