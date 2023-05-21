@@ -72,60 +72,62 @@ class NewsWidget extends StatelessWidget {
                   ),
                 ),
               ],
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey[400]!, width: 2),
-                ),
-                width: double.maxFinite,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: MediaQuery.of(context).size.height / 4,
-                        width: double.maxFinite,
-                        color: Colors.grey[200],
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'News',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6
-                                    ?.copyWith(
-                                  color: Colors.black.withOpacity(0.6),
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w900,
+              if(kIsWeb)...[
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey[400]!, width: 2),
+                  ),
+                  width: double.maxFinite,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 4,
+                          width: double.maxFinite,
+                          color: Colors.grey[200],
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'News',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline6
+                                      ?.copyWith(
+                                    color: Colors.black.withOpacity(0.6),
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w900,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(height: 18),
-                              Expanded(
-                                child: Text(
-                                  news[index].articleDescription,
-                                  style: Theme.of(context).textTheme.bodyText2,
+                                SizedBox(height: 18),
+                                Expanded(
+                                  child: Text(
+                                    news[index].articleDescription,
+                                    style: Theme.of(context).textTheme.bodyText2,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Expanded(
-                      child: SizedBox(
-                        height: MediaQuery.of(context).size.height / 4,
-                        child: CachedNetworkImage(
-                          width: double.infinity,
-                          height: double.maxFinite,
-                          imageUrl: news[index].articleImg,
-                          fit: BoxFit.fill,
+                      Expanded(
+                        child: SizedBox(
+                          height: MediaQuery.of(context).size.height / 4,
+                          child: CachedNetworkImage(
+                            width: double.infinity,
+                            height: double.maxFinite,
+                            imageUrl: news[index].articleImg,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              )
+                    ],
+                  ),
+                )
+              ]
             ],
           ),
         ),
